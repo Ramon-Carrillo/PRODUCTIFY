@@ -1,0 +1,71 @@
+# =============================================
+# Dependencies
+# =============================================
+node_modules/
+.pnp/
+.pnp.js
+.yarn/install-state.gz
+
+# =============================================
+# Build / Output
+# =============================================
+dist/
+build/
+out/
+*.tsbuildinfo                # TypeScript incremental build cache
+
+# =============================================
+# Environment & Secrets
+# =============================================
+.env
+.env.local
+.env.*.local
+*.local.env
+
+# =============================================
+# Logs & Runtime
+# =============================================
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =============================================
+# Testing & Coverage
+# =============================================
+coverage/
+*.lcov
+.nyc_output
+junit.xml
+
+# =============================================
+# IDE & Editor
+# =============================================
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# =============================================
+# OS & Temporary files
+# =============================================
+.tmp/
+.temp/
+*.tmp
+
+# =============================================
+# Optional: Package manager lockfiles (uncomment if you want to ignore)
+# =============================================
+# package-lock.json
+# yarn.lock
+# pnpm-lock.yaml
