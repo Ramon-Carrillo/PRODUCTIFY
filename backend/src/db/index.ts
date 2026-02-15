@@ -4,7 +4,7 @@ import * as schema from './schema'
 import { ENV } from '../config/env'
 
 if (!ENV.DB_URL) {
-  throw new Error('DATABASE_URL is not defined in environment variables')
+  throw new Error('DB_URL is not defined in environment variables')
 }
 
 const pool = new Pool({ connectionString: ENV.DB_URL })
