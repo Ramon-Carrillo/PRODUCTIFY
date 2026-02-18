@@ -23,6 +23,7 @@ export async function syncUser(req: Request, res: Response) {
       name,
       imageUrl,
     })
+    return res.status(200).json({ success: true, user })
   } catch (error) {
     console.error(error)
     res.status(500).json({ success: false, message: 'Internal Server Error' })

@@ -17,7 +17,9 @@ export const createComment = async (req: Request, res: Response) => {
     const normalizedProductId = Array.isArray(productId)
       ? productId[0]
       : productId
-
+    if (!normalizedProductId) {
+      return res.status(400).json({ error: 'Product id is required' })
+    }
     // verify product exists
     const product = await queries.getProductById(normalizedProductId)
     if (!product) return res.status(404).json({ error: 'Product not found' })
@@ -47,6 +49,9 @@ export const deleteComment = async (req: Request, res: Response) => {
       ? commentId[0]
       : commentId
 
+    if (!normalizedCommentId) {
+    return res.status(400).json({ error: 'Comment id is required' })
+    }
     // check if comment exists and belongs to user
     const existingComment = await queries.getCommentById(normalizedCommentId)
     if (!existingComment)
