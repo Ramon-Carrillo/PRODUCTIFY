@@ -78,8 +78,19 @@ export const updateProduct = async (req: Request, res: Response) => {
     const { userId } = getAuth(req)
     if (!userId) return res.status(401).json({ error: 'Unauthorized' })
 
-    const { id } = req.params
+     const { id } = req.params
     const { title, description, imageUrl } = req.body
+    const updates: Partial<{
+      title: string
+      description: string
+      imageUrl: string
+    }> = {}
+   if (title !== undefined) updates.title = title
+   if (description !== undefined) updates.description = description
+    if (imageUrl !== undefined) updates.imageUrl = imageUrl
+    if (Object.keys(updates).length === 0) {
+      return res.status(400).json({ error: 'At least one field is required' })
+   }
 
     // Check if product exists and belongs to user
     const existingProduct = await queries.getProductById(
@@ -95,14 +106,10 @@ export const updateProduct = async (req: Request, res: Response) => {
       return
     }
 
-    const product = await queries.updateProduct(
+     const product = await queries.updateProduct(
       Array.isArray(id) ? id[0] : id,
-      {
-        title,
-        description,
-        imageUrl,
-      }
-    )
+      updates
+   )
 
     res.status(200).json(product)
   } catch (error) {
