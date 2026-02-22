@@ -97,7 +97,7 @@ export const updateProduct = async (id: string, data: Partial<NewProduct>) => {
 
   const [product] = await db
     .update(products)
-    .set(data)
+    .set({ ...data, updatedAt: new Date() })
     .where(eq(products.id, id))
     .returning()
   return product
