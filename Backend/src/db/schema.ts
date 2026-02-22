@@ -23,10 +23,7 @@ export const products = pgTable('products', {
     .notNull()
     .references(() => users.id, { onDelete: 'cascade' }),
   createdAt: timestamp('created_at', { mode: 'date' }).notNull().defaultNow(),
-   updatedAt: timestamp('updated_at', { mode: 'date' })
-   .notNull()
-   .defaultNow()
-   .$onUpdate(() => new Date()),
+  updatedAt: timestamp('updated_at', { mode: 'date' }).notNull().defaultNow(),
 })
 
 export const comments = pgTable('comments', {
