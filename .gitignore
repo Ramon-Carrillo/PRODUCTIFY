@@ -1,0 +1,316 @@
+# This is a comprehensive .gitignore template for a general project.
+# It covers common ignores for various operating systems, editors, languages, and tools.
+# Customize it as needed for your specific project.
+
+# --------------------------------------------------------
+# Operating System Files
+# --------------------------------------------------------
+
+# macOS
+.DS_Store
+.Apple*
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.*
+*.icloud
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+Desktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+# temporary files which can be created if a process still has a handle open of a deleted file
+.fuse_hidden*
+# KDE directory preferences
+.directory
+# Linux trash folder which might get created by some applications
+Trash-*
+
+# --------------------------------------------------------
+# Editors and IDEs
+# --------------------------------------------------------
+
+# Vim
+[._]*.s[a-v][a-z]
+!*.svg  # Allow SVG files
+[._]*.sw[a-p]
+[._]s[a-rt-v][a-z]
+[._]ss[a-gi-z]
+[._]sw[a-p]
+Session.vim
+Sessionx.vim
+.netrwhist
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# Visual Studio Code
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+!.vscode/*.code-snippets
+.history
+.ionide
+
+# JetBrains (IntelliJ, PyCharm, etc.)
+.idea/
+*.iml
+*.iws
+out/
+
+# Sublime Text
+*.tmlanguage.cache
+*.tmPreferences.cache
+*.stTheme.cache
+*.sublime-workspace
+*.sublime-project
+
+# Eclipse
+.metadata
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.settings/
+.loadpath
+.recommenders
+
+# NetBeans
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+*.nbm
+
+# --------------------------------------------------------
+# Dependency Directories
+# --------------------------------------------------------
+
+# Node.js
+node_modules/
+npm-debug.log
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+*.manifest
+*.spec
+pip-log.txt
+pip-delete-this-directory.txt
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+*.mo
+*.pot
+*.log
+local_settings.py
+db.sqlite3
+db.sqlite3-journal
+instance/
+.webassets-cache
+.scrapy
+docs/_build/
+*.sage.py
+
+# Ruby
+*.gem
+*.rbc
+/.config
+/coverage/
+/InstalledFiles
+/pkg/
+/spec/reports/
+/spec/examples.txt
+/test/tmp/
+/test/version_tmp/
+/tmp/
+.rspec
+.rvmrc
+.ruby-version
+.ruby-gemset
+Gemfile.lock
+vendor/bundle
+vendor/cache
+vendor/gems
+.byebug_history
+
+# Java
+*.class
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+hs_err_pid*
+replay_pid*
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+.mvn/extensions.xml
+
+# Gradle
+.gradle
+build/
+
+# --------------------------------------------------------
+# Build Artifacts and Outputs
+# --------------------------------------------------------
+
+# General build directories
+build/
+dist/
+out/
+target/
+bin/
+obj/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+.pnpm-debug.log*
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage
+*.lcov
+
+# --------------------------------------------------------
+# Environment and Configuration
+# --------------------------------------------------------
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.example
+
+# Database dumps
+*.sql
+*.sqlite
+*.db
+
+# --------------------------------------------------------
+# Miscellaneous
+# --------------------------------------------------------
+
+# Parcel.js cache
+.parcel-cache
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
+
+# Serverless
+.serverless/
+
+# Docker
+Dockerfile.*
+.dockerignore
+.docker/
+
+# Kubernetes
+*.kube
+
+# Package lock files (if not using them)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Ignore all .pdf files except those in the docs folder (example)
+*.pdf
+!docs/*.pdf
+
+# Personal notes or temp files
+notes.txt
+todo.md
+*.bak
+*.tmp
+
+# End of .gitignore
